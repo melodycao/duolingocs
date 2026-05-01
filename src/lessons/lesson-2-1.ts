@@ -1,0 +1,103 @@
+import type { LessonDefinition } from "./types";
+
+export const lesson_2_1: LessonDefinition = {
+  id: "2-1",
+  title: "Labeled Box (Variables)",
+  questions: [
+    {
+      kind: "matchDrag",
+      id: "2-1-q1",
+      prompt: "Match the variable name to the value it would likely hold.",
+      contextLines: ["Drag each value into the matching code box, then press Submit."],
+      leftItems: ["player_name", "apple_count", "is_finished"],
+      draggableValues: ["\"Duo\"", "5", "True"],
+      correctValues: ["\"Duo\"", "5", "True"],
+    },
+    {
+      kind: "tokenAssemble",
+      id: "2-1-q2",
+      prompt: "Duo wants to store the number of lives he has. Assemble the code!",
+      contextLines: ["Tap tokens to fill boxes from left to right. Tap a filled box to remove it."],
+      slotCount: 3,
+      tokens: ["lives", "=", "3"],
+      correctOrder: ["lives", "=", "3"],
+    },
+    {
+      kind: "singleChoice",
+      id: "2-1-q3",
+      prompt: "If we run the code score = 10, what is the value inside the box?",
+      options: ["score", "10", "="],
+      correctAnswer: "10",
+    },
+    {
+      kind: "singleChoice",
+      id: "2-1-q4",
+      prompt:
+        "Computers are picky! Which of these is a good name for a variable to store a cat's name?",
+      options: ["cat_name", "123_NAME", "!@#$%"],
+      correctAnswer: "cat_name",
+    },
+    {
+      kind: "singleChoice",
+      id: "2-1-q5",
+      prompt: "Duo found a coin! What is the final value of coins?",
+      contextLines: ["1. coins = 5", "2. coins = 6"],
+      options: ["5", "6", "11"],
+      correctAnswer: "6",
+    },
+    {
+      kind: "singleChoice",
+      id: "2-1-q6",
+      prompt: "In the code pet = \"Owl\", what is the name of the variable?",
+      options: ["pet", "\"Owl\"", "="],
+      correctAnswer: "pet",
+    },
+    {
+      kind: "tokenAssemble",
+      id: "2-1-q7",
+      prompt: "Store the word \"Sword\" in a variable called item.",
+      contextLines: ["Tap tokens to fill boxes from left to right. Tap a filled box to remove it."],
+      slotCount: 3,
+      tokens: ["\"Sword\"", "item", "="],
+      correctOrder: ["item", "=", "\"Sword\""],
+    },
+    {
+      kind: "singleChoice",
+      id: "2-1-q8",
+      prompt: "Duo tries to say print(health), but the computer is confused. Why?",
+      contextLines: ["No code created a health variable before this line."],
+      options: [
+        "The computer is tired.",
+        "The variable health was never created.",
+        "health is a bad word.",
+      ],
+      correctAnswer: "The variable health was never created.",
+    },
+    {
+      kind: "multiSelect",
+      id: "2-1-q9",
+      prompt: "In a racing game, which of these would be stored in a variable?",
+      contextLines: ["Select 3 choices, then press Submit."],
+      options: [
+        "The car's current speed.",
+        "The player's rank (1st, 2nd, etc.).",
+        "The physical plastic of the controller.",
+        "The name of the track.",
+      ],
+      correctAnswers: [
+        "The car's current speed.",
+        "The player's rank (1st, 2nd, etc.).",
+        "The name of the track.",
+      ],
+      requiredSelectionCount: 3,
+    },
+    {
+      kind: "singleChoice",
+      id: "2-1-q10",
+      prompt: "Look at the code. What is the value of x at the end?",
+      contextLines: ["1. x = 10", "2. y = 5", "3. x = y"],
+      options: ["10", "5", "15"],
+      correctAnswer: "5",
+    },
+  ],
+};

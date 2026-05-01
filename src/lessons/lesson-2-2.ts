@@ -1,0 +1,96 @@
+import type { LessonDefinition } from "./types";
+
+export const lesson_2_2: LessonDefinition = {
+  id: "2-2",
+  title: "Numbers vs Words (Strings and Integers)",
+  questions: [
+    {
+      kind: "singleChoice",
+      id: "2-2-q1",
+      prompt:
+        "In coding, we put Strings (text) inside quotation marks so the computer doesn't get confused. Which of these is a String?",
+      options: ["100", "\"100\"", "score"],
+      correctAnswer: "\"100\"",
+    },
+    {
+      kind: "multiSelect",
+      id: "2-2-q2",
+      prompt: "Which of these variables are stored as Numbers (Integers) so we can add them up later?",
+      contextLines: ["Select 2 choices, then press Submit."],
+      options: [
+        "player_age = 25",
+        "user_name = \"SpeedyDuo\"",
+        "gold_coins = 50",
+        "favorite_color = \"Green\"",
+      ],
+      correctAnswers: ["player_age = 25", "gold_coins = 50"],
+      requiredSelectionCount: 2,
+    },
+    {
+      kind: "singleChoice",
+      id: "2-2-q3",
+      prompt: "Duo tried to run this code, but it crashed! Why?",
+      contextLines: ["1. total = 10 + \"5\""],
+      options: [
+        "10 is too small.",
+        "You can't add a Number to a String (text).",
+        "The plus sign is broken.",
+      ],
+      correctAnswer: "You can't add a Number to a String (text).",
+    },
+    {
+      kind: "shortAnswer",
+      id: "2-2-q4",
+      prompt: "Duo wants to save his name. Finish the String!",
+      contextLines: ["Type the correct String value for Duo."],
+      placeholder: "Type your answer",
+      acceptableAnswers: ["\"Duo\"", "Duo"],
+      caseSensitive: true,
+    },
+    {
+      kind: "singleChoice",
+      id: "2-2-q5",
+      prompt: "Which of the following is an Integer?",
+      options: ["42", "\"Forty-Two\"", "\"42\""],
+      correctAnswer: "42",
+    },
+    {
+      kind: "matchDrag",
+      id: "2-2-q6",
+      prompt: "Match the Data Type to its category!",
+      contextLines: ["Drag each data value to the correct type box, then press Submit."],
+      leftItems: ["\"Hello\"", "15", "\"High Score\""],
+      draggableValues: ["String", "Integer", "String"],
+      correctValues: ["String", "Integer", "String"],
+    },
+    {
+      kind: "shortAnswer",
+      id: "2-2-q7",
+      prompt: "In coding, \"Apple\" + \"Pie\" doesn't make a number. What does it make?",
+      placeholder: "Type your answer",
+      acceptableAnswers: ["\"ApplePie\"", "ApplePie"],
+      caseSensitive: true,
+    },
+    {
+      kind: "singleChoice",
+      id: "2-2-q8",
+      prompt: "You are building a game. How should you store the Level Number?",
+      options: ["As an Integer (e.g., 5)", "As a String (e.g., \"Five\")"],
+      correctAnswer: "As an Integer (e.g., 5)",
+    },
+    {
+      kind: "singleChoice",
+      id: "2-2-q9",
+      prompt: "One of these variables is NOT like the others. Which one is a String?",
+      options: ["x = 5", "y = 10", "z = \"15\""],
+      correctAnswer: "z = \"15\"",
+    },
+    {
+      kind: "singleChoice",
+      id: "2-2-q10",
+      prompt: "If apples = 3 and oranges = \"3\", which one can you multiply by 2?",
+      options: ["apples", "oranges", "Both"],
+      correctAnswer: "apples",
+    },
+  ],
+};
